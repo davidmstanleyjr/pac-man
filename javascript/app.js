@@ -841,6 +841,11 @@ document.addEventListener('DOMContentLoaded', () => {
 					!squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair')
 				)
 					pacmanCurrentIndex -= 1;
+
+				//this checks if pacman is in the left exit
+				if (pacmanCurrentIndex - 1 === 363) {
+					pacmanCurrentIndex = 391;
+				}
 				break;
 			case 38:
 				if (

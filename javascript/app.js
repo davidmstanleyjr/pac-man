@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const grid = document.querySelector('.grid');
 	const scoreDisplay = document.getElementById('score');
 	const width = 28; //28 * 28 = 784 squares
+	let score = 0;
 
 	//this is for the grid layout and what's contained in the squares
 	const layout = [
@@ -882,6 +883,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		squares[pacmanCurrentIndex].classList.add('pac-man');
 
+		pacDotEaten();
 		//pacDotEaten()
 		//powerPelletEaten()
 		//checkForGameOver()
@@ -889,4 +891,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	document.addEventListener('keyup', movePacman);
+
+	//if the square pacman is currently in contains a pacdot class, add 1 to the score. This is the logic for him eating.
+	function pacDotEaten() {
+		if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {
+			score++;
+			scoreDisplay.innerHTML = score;
+			squares[pacmanCurrentIndex].classList.remove('pac-dot');
+		}
+	}
 });

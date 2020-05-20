@@ -862,7 +862,14 @@ document.addEventListener('DOMContentLoaded', () => {
 					!squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair')
 				)
 					pacmanCurrentIndex += 1;
+
+				//this checks for pacman in the right exit
+				if (pacmanCurrentIndex + 1 === 392) {
+					pacmanCurrentIndex = 364;
+				}
+
 				break;
+
 			case 40:
 				if (
 					pacmanCurrentIndex + width < width * width &&

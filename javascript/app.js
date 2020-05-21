@@ -886,8 +886,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		pacDotEaten();
 		//pacDotEaten()
 		powerPelletEaten();
-		//checkForGameOver()
-		//checkForWIn()
+		checkForGameOver();
+		checkForWin();
 	}
 
 	document.addEventListener('keyup', movePacman);
@@ -976,6 +976,31 @@ document.addEventListener('DOMContentLoaded', () => {
 				score += 100;
 				squares[ghost.currentIndex].classList.add(ghost.className, 'ghost');
 			}
+			checkForGameOver();
 		}, ghost.speed);
+	}
+
+	//check for game over
+	function checkForGameOver() {
+		if (
+			squares[pacmanCurrentIndex].classList.contains('ghost') &&
+			!squares[pacmanCurrentIndex].classList.contains('scared-ghost')
+		) {
+			ghosts.forEach((ghost) => clearInterval(ghost.timerId));
+			document.removeEventListener('keyup', movePacman);
+			setTimeout(function() {
+				alert('Game Over');
+			}, 500);
+		}
+		// scoreDisplay.innerHTML = 'GAME OVER';
+	}
+
+	//check for a win
+	function checkForWin() {
+		if (score === 274) {
+			ghosts.forEach((ghost) => clearInterval(ghost.timerId));
+			document.removeEventListener('keyup', movePacman);
+			scoreDisplay.innerHTML = 'YOU WON!';
+		}
 	}
 });

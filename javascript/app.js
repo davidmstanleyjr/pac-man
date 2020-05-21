@@ -910,12 +910,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			this.currentIndex = startIndex;
 			this.timerId = NaN;
 		}
-    }
-    
-    ghosts = {
-        new Ghost('blinky', 348, 250),
-        new Ghost('pinky', 376, 400),
-        new Ghost('inky', 351, 300),
-        new Ghost('clyde', 379, 500)
-    };
+	}
+
+	ghosts = [
+		new Ghost('blinky', 348, 250),
+		new Ghost('pinky', 376, 400),
+		new Ghost('inky', 351, 300),
+		new Ghost('clyde', 379, 500)
+	];
+
+	//draw ghosts onto the grid
+	ghosts.forEach((ghost) => {
+		squares[ghost.currentIndex].classList.add(ghost.className);
+		squares[ghost.currentIndex].classList.add('ghost');
+	});
 });

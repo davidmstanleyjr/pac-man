@@ -910,5 +910,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			this.currentIndex = startIndex;
 			this.timerId = NaN;
 		}
-	}
+    }
+    
+    ghosts = {
+        new Ghost('blinky', 348, 250),
+        new Ghost('pinky', 376, 400),
+        new Ghost('inky', 351, 300),
+        new Ghost('clyde', 379, 500)
+    };
 });

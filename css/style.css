@@ -18,7 +18,7 @@
 }
 
 .wall {
-	background-color: blue;
+	background-color: black;
 }
 
 .power-pellet {
@@ -27,22 +27,22 @@
 }
 
 .blinky {
-	background-color: red;
+	background-image: url('blinky.jpg');
 	border: 0px;
 }
 
 .pinky {
-	background-color: pink;
+	background-image: url('pinky.png');
 	border: 0px;
 }
 
 .inky {
-	background-color: cyan;
+	background-image: url('inky.jpg');
 	border: 0px;
 }
 
 .clyde {
-	background-color: orange;
+	background-image: url('clyde.png');
 	border: 0;
 }
 
@@ -52,6 +52,7 @@
 }
 
 .pac-man {
-	background-color: yellow;
+	background-image: url('pacman1.png');
+
 	border-radius: 10px;
 }

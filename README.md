@@ -19,3 +19,7 @@ It was hard to get the timers to work and also to get the ghosts to move around.
 
 # Screenshots
 ![Screenshot 1](css/pac-snip.PNG)
+
+# Live Page
+
+Here is a link to the deployed site https://davidmstanleyjr.github.io/pac-man/

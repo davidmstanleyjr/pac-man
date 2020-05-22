@@ -18,4 +18,4 @@ I built this because I wanted to practice vanilla Javascript while also doing a 
 It was hard to get the timers to work and also to get the ghosts to move around. I wasn't using math.floor and math.floor correctly but once I figured it out, I was ok. I also had to pics of pac-man and the ghosts online and resize them, which took forever.
 
 # Screenshots
-![Screenshot](css/pac-snip.png)
+![Screenshot 1](css/pac-snip.PNG)
